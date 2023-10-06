@@ -1,0 +1,127 @@
+.event {
+  width: 22vw;
+  border-radius: 20px;
+  margin: 15px;
+  background-color: white;
+}
+.img {
+  height: 20vw;
+  background-image: url(../../assets/bg/md1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.detgailsArea {
+  padding: 24px;
+  padding-bottom: 14px;
+}
+.eventTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #537bff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.eventdate {
+  background-image: url(../../assets/icons/date.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 18px;
+  color: #626262ab;
+  font-size: 15px;
+  padding-left: 20px;
+}
+.eventDesc {
+  color: #626262;
+  font-size: 14px;
+  padding-top: 4px;
+}
+.locationArea {
+  border-top: 2px solid #b3b3b341;
+  padding: 16px;
+  padding-left: 44px;
+  background-image: url(../../assets/icons/pin.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+  background-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #00000063;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popupBody {
+  border-radius: 22px;
+  background-color: white;
+  margin: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 600px;
+  background-image: url(../../assets/bg/md1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.popDetailsArea {
+  height: 100%;
+  border-radius: 20px;
+  background-image: linear-gradient(black, transparent, black);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+.popHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.xBtn {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../assets/icons/x.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .event {
+    width: 80vw;
+  }
+  .img {
+    height: 80vw;
+  }
+  .eventTitle {
+    font-size: 16px;
+  }
+  .eventdate {
+    font-size: 12px;
+  }
+  .eventDesc {
+    font-size: 12px;
+  }
+  .locationArea {
+    font-size: 12px;
+    padding-top: 15px;
+    background-size: 15px;
+    padding-left: 35px;
+  }
+}

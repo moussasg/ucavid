@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Ubuntu;
+  src: url(./assets/font/Ubuntu/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: Ubuntu-light;
+  src: url(./assets/font/Ubuntu/Ubuntu-Light.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0px;
+  font-family: Ubuntu;
+  background-color: #f8f9fb;
+  color: #0d0b20;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #999999; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #353535; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d1d1d; 
 }

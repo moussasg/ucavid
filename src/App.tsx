@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, StrictMode } from "react";
+import HomeScreen from "./screens/home";
+import AcademyScreen from "./screens/academy";
+import AgencyScreen from "./screens/agency";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      page: "",
+    };
+  }
+
+  _setPage = (v: string) => {
+     window.history.replaceState(null, v, v);
+    this.setState({ page: v });
+  };
+
+  componentDidMount(): void {
+      console.log(window.location.pathname);
+      
+  }
+
+  render() {
+    const { page }: any = this.state;
+    // event, academy, agency
+    return (
+      <StrictMode>
+        <HomeScreen setPage={this._setPage} />
+        {page === "academy" && <AcademyScreen />}
+        {page === "agency" && <AgencyScreen />}
+      </StrictMode>
+    );
+  }
 }
-
-export default App;
