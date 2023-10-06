@@ -6,24 +6,11 @@ export default class AgencyScreen extends Component {
   render() {
     return (
       <div className={cs.body}>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <div className={cs.banner}>
+          <div className={cs.bannerBody}>
+            hallow World
+          </div>
+        </div>
         <ScreenFooter />
         <ScreenHeader />
       </div>
